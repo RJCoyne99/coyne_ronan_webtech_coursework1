@@ -33,7 +33,7 @@ function DeCrypt(input, key) {
     var nextchar = secret.charAt(j);
     var index = alphabet.indexOf(nextchar);
     if (index >= 0) {
-      var shifted = (index + k) % 36;
+      var shifted = (36 + index + k) % 36;
       encoded += alphabet.charAt(shifted);
     } else {
       encoded += nextchar;
